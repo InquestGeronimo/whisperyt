@@ -15,7 +15,7 @@ LONG_DESCRIPTION = "Use Whisper speech-to-text to transcribe YouTube videos and 
 setup(
     name="whisperyt",
     version=VERSION,
-    author="InquestGeronimmo (Florian Dedov)",
+    author="InquestGeronimmo",
     author_email="rcostanl@gmail.com",
     description=DESCRIPTION,
     long_description_content_type="text/markdown",
