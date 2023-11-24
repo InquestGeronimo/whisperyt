@@ -1,1 +1,1 @@
-from main import YouTubeTranscriber
+from whisperyt.main import YouTubeTranscriber
