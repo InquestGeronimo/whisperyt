@@ -13,7 +13,7 @@ LONG_DESCRIPTION = "Use Whisper speech-to-text to transcribe YouTube videos and 
 
 # Setting up
 setup(
-    name="whisper-yt",
+    name="whisperyt",
     version=VERSION,
     author="InquestGeronimmo (Florian Dedov)",
     author_email="rcostanl@gmail.com",
@@ -21,7 +21,7 @@ setup(
     long_description_content_type="text/markdown",
     long_description=long_description,
     packages=find_packages(),
-    install_requires=["requests", "pandas"],
+    install_requires=["requests==2.31.0", "pandas==2.1.3"],
     keywords=["python", "youtube", "whisper", "transcription", "speech-to-text"],
     classifiers=[
         "Development Status :: 1 - Planning",
