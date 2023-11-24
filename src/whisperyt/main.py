@@ -36,19 +36,3 @@ class YouTubeTranscriber:
         except Exception as e:
             print(f"An error occurred: {e}")
             return None
-
-
-
-
-
-
-# Usage
-# API_KEY = "0a84339b-c22b-471a-aa1a-860365a5e985"
-# Gladia = YouTubeTranscriber(API_KEY)
-# response = Gladia.transcribe("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
-# json_data = pretty_json(response)
-# save_json_to_file(json_data, "output.json")
-# df = get_table("output.json")
-# get_transcription_by_turn(df)
-# get_full_transcription("output.json")
-# get_transcription_speaker("output.json")
