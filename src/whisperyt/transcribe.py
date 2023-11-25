@@ -2,9 +2,7 @@ import yt_dlp
 import requests
 import os
 
-from .postprocess import DataProcessor
-
-class YouTubeTranscriber(DataProcessor):
+class YouTubeTranscriber:
     """
     A class for transcribing audio from YouTube videos.
 
