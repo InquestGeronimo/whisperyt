@@ -22,7 +22,7 @@ setup(
     long_description=long_description,
     package_dir={"": "src"},
     packages=find_packages("src"),
-    install_requires=["requests==2.31.0", "pandas==2.1.3"],
+    install_requires=["requests==2.31.0", "pandas==2.1.3", "yt-dlp==2023.11.16"],
     keywords=["python", "youtube", "whisper", "transcription", "speech-to-text"],
     classifiers=[
         "Development Status :: 1 - Planning",
