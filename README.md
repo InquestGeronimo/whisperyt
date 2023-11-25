@@ -17,11 +17,11 @@ pip install whisperyt
 The initial step involves initializing the YouTubeTranscriber class before proceeding with your API request. To get started, simply create a free account on [Gladia's website](https://app.gladia.io/?_gl=1*1thro73*_ga*MTI5MDgyMjkzMS4xNzAwMzE0NTc5*_ga_LMW59LN2SD*MTcwMDg3MTUwMy45LjAuMTcwMDg3MTUwMy4wLjAuMA..) and provide your API token. Afterwards, pass the YouTube video URL of your choice:
 
 ```py
-from whisperyt import YouTubeTranscriber, pretty_json
+from whisperyt import YouTubeTranscriber, DataProcessor
 
 Gladia = YouTubeTranscriber("YOUR-API-KEY")
 response = Gladia.transcribe("https://www.youtube.com/watch?v=BrcKRhQ7K00")
-print(pretty_json(response))
+print(DataProcessor.pretty_json(response))
 ```
 Chunk of output:
 
