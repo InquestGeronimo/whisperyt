@@ -39,8 +39,9 @@ class YouTubeTranscriber:
         }
 
         try:
-            response = requests.post("https://api.gladia.io/video/text/video-transcription/",
-                                         headers=self.headers, files=files)
+            response = requests.post(
+                "https://api.gladia.io/video/text/video-transcription/", headers=self.headers, files=files
+            )
             response.raise_for_status()  # Raises a HTTPError if the response was an HTTP error
             return response
         except Exception as e:
