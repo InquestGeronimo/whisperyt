@@ -12,15 +12,14 @@ def pretty_json(response):
         return None
 
     try:
-        # Decode the response content
-        response_content = response.content.decode('utf-8')
-        json_data = json.loads(response_content)
+        json_data = json.loads(response.text)
 
         # Pretty-print the JSON data
         pretty_json_str = json.dumps(json_data, indent=4)
         print(pretty_json_str)
 
         return json_data
+    
     except json.JSONDecodeError:
         print("Failed to decode JSON response.")
         return None
