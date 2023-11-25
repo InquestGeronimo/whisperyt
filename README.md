@@ -26,3 +26,41 @@ print(pretty_json(response))
 Output:
 
 <img align="center" width="250" height="440" src="./img/pretty-json.png">
+
+### Save Transcription in JSON File
+
+```py
+from whisperyt import YouTubeTranscriber
+
+Gladia = YouTubeTranscriber("YOUR-API-KEY")
+response = Gladia.transcribe("https://www.youtube.com/watch?v=BrcKRhQ7K00")
+
+Gladia.save_json_to_file(response.json(), "output.json")
+```
+
+#### View Transcription in Pandas Dataframe
+
+After your transcription, has been saved in a JSON file, you can load it in a Pandas Dataframe:
+
+```py
+df = Gladia.get_table("output.json")
+print(df)
+```
+
+Output:
+
+<img align="center" width="800" height="440" src="./img/df.png">
+
+
+#### View Transcript by Speaker Turn:
+
+```py
+df = Gladia.get_table("output.json")
+Gladia.get_transcription_by_turn(df)
+```
+
+Output:
+
+<img align="center" width="700" height="250" src="./img/speaker-turn.png">
+
+
