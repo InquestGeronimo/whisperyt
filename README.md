@@ -24,6 +24,7 @@ The initial step involves initializing the `YouTubeTranscriber` class before pro
 from whisperyt import YouTubeTranscriber, DataProcessor
 
 Gladia = YouTubeTranscriber("YOUR-API-KEY")
+
 response = Gladia.transcribe("https://www.youtube.com/watch?v=BrcKRhQ7K00")
 print(DataProcessor.pretty_json(response))
 ```
@@ -38,8 +39,8 @@ Chunk of output:
 from whisperyt import YouTubeTranscriber, DataProcessor
 
 Gladia = YouTubeTranscriber("YOUR-API-KEY")
-response = Gladia.transcribe("https://www.youtube.com/watch?v=BrcKRhQ7K00")
 
+response = Gladia.transcribe("https://www.youtube.com/watch?v=BrcKRhQ7K00")
 DataProcessor.save_json_file(response.json(), "output.json")
 ```
 ---
