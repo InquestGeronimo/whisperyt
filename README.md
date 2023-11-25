@@ -14,7 +14,7 @@ pip install whisperyt
 ## Quick Start <img align="center" width="23" height="23" src="https://media.giphy.com/media/PeaNPlyOVPNMHjqTm7/giphy.gif">
 <br>
 
-The initial step involves initializing the YouTubeTranscriber class before proceeding with your API request. To get started, simply create a free account on [Gladia's website](https://app.gladia.io/?_gl=1*1thro73*_ga*MTI5MDgyMjkzMS4xNzAwMzE0NTc5*_ga_LMW59LN2SD*MTcwMDg3MTUwMy45LjAuMTcwMDg3MTUwMy4wLjAuMA..) and provide your API token. Afterwards, pass the YouTube video URL of your choice:
+The initial step involves initializing the `YouTubeTranscriber` class before proceeding with your API request. To get started, simply create a free account on [Gladia's website](https://app.gladia.io/?_gl=1*1thro73*_ga*MTI5MDgyMjkzMS4xNzAwMzE0NTc5*_ga_LMW59LN2SD*MTcwMDg3MTUwMy45LjAuMTcwMDg3MTUwMy4wLjAuMA..) and provide your API token. Afterwards, pass the YouTube video URL of your choice:
 
 ```py
 from whisperyt import YouTubeTranscriber, DataProcessor
