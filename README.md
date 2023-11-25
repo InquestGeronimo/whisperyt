@@ -37,8 +37,8 @@ response = Gladia.transcribe("https://www.youtube.com/watch?v=BrcKRhQ7K00")
 
 DataProcessor.save_json_file(response.json(), "output.json")
 ```
-
-#### View Transcription in Pandas Dataframe
+---
+### View Transcription in Pandas Dataframe
 
 After your transcription, has been saved in a JSON file, you can load it in a Pandas Dataframe:
 
@@ -51,8 +51,9 @@ Output:
 
 <img align="center" width="700" height="95" src="./img/dataframe.png">
 
+---
 
-#### View Transcript by Speaker Turn:
+### View Transcript by Speaker Turn:
 
 ```py
 df = DataProcessor.get_table("output.json")
