@@ -23,7 +23,7 @@ class DataProcessor:
             return None
 
     @staticmethod
-    def save_json_to_file(json_data: Union[dict, list], file_name: str) -> None:
+    def save_json_file(json_data: Union[dict, list], file_name: str) -> None:
         """
         Save JSON data to a file.
 

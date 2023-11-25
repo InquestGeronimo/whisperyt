@@ -1,4 +1,4 @@
-<img align="center" width="200" height="160" src="./img/whisperyt.png">
+<img align="center" width="300" height="220" src="./img/whisperyt.png">
 
 **WhisperYT** is a Python client for interacting with Gladia's [API](https://docs.gladia.io/reference/pre-recorded#sending-video-for-transcription) designed specifically for transcribing YouTube videos. Powered by an optimized variant of OpenAI's Whisper model, Gladia's backend performs Automatic Speech Recognition (ASR), converting spoken words into written text with remarkable precision. Best of all, you can enjoy up to 10 hours of free API usage each month.
 
@@ -23,19 +23,19 @@ Gladia = YouTubeTranscriber("YOUR-API-KEY")
 response = Gladia.transcribe("https://www.youtube.com/watch?v=BrcKRhQ7K00")
 print(pretty_json(response))
 ```
-Output:
+Chunk of output:
 
 <img align="center" width="250" height="440" src="./img/pretty-json.png">
 
 ### Save Transcription in JSON File
 
 ```py
-from whisperyt import YouTubeTranscriber
+from whisperyt import YouTubeTranscriber, DataProcessor
 
 Gladia = YouTubeTranscriber("YOUR-API-KEY")
 response = Gladia.transcribe("https://www.youtube.com/watch?v=BrcKRhQ7K00")
 
-Gladia.save_json_to_file(response.json(), "output.json")
+DataProcessor.save_json_file(response.json(), "output.json")
 ```
 
 #### View Transcription in Pandas Dataframe
@@ -43,7 +43,7 @@ Gladia.save_json_to_file(response.json(), "output.json")
 After your transcription, has been saved in a JSON file, you can load it in a Pandas Dataframe:
 
 ```py
-df = Gladia.get_table("output.json")
+df = DataProcessor.get_table("output.json")
 print(df)
 ```
 
@@ -55,8 +55,8 @@ Output:
 #### View Transcript by Speaker Turn:
 
 ```py
-df = Gladia.get_table("output.json")
-Gladia.get_transcription_by_turn(df)
+df = DataProcessor.get_table("output.json")
+DataProcessor.get_transcription_by_turn(df)
 ```
 
 Output:
