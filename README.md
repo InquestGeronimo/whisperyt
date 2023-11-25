@@ -27,6 +27,7 @@ Chunk of output:
 
 <img align="center" width="250" height="440" src="./img/pretty-json.png">
 
+---
 ### Save Transcription in JSON File
 
 ```py
