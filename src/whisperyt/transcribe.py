@@ -1,6 +1,8 @@
 import yt_dlp
+
 import requests
 import os
+from typing import Optional, Dict, Any
 
 class YouTubeTranscriber:
     """
@@ -19,7 +21,7 @@ class YouTubeTranscriber:
     - _download_video(url): Downloads the video from YouTube and returns the filename of the saved video.
     """
     
-    def __init__(self, api_key):
+    def __init__(self, api_key: str) -> None:
         """
         Initialize the YouTubeTranscriber.
         :param api_key: API key for the transcription service.
@@ -30,7 +32,7 @@ class YouTubeTranscriber:
             "x-gladia-key": api_key,
         }
 
-    def _download_video(self, url):
+    def _download_video(self, url: str) -> str:
         """
         Private method to download video from YouTube. File is saved in working directory.
         :param url: URL of the YouTube video.
@@ -47,7 +49,7 @@ class YouTubeTranscriber:
             video = result.get('entries', [result])[0]
             return f"{video['id']}.{video['ext']}"
 
-    def transcribe(self, url, toggle_diarization=True):
+    def transcribe(self, url: str, toggle_diarization: bool = True) -> Optional[requests.Response]:
         """
         Transcribe the audio from a given YouTube URL.
         :param url: URL of the YouTube video.
