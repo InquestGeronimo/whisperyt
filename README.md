@@ -49,7 +49,7 @@ print(df)
 
 Output:
 
-<img align="center" width="800" height="440" src="./img/df.png">
+<img align="center" width="700" height="95" src="./img/dataframe.png">
 
 
 #### View Transcript by Speaker Turn:
@@ -61,6 +61,4 @@ Gladia.get_transcription_by_turn(df)
 
 Output:
 
-<img align="center" width="700" height="250" src="./img/speaker-turn.png">
-
-
+<img align="center" width="650" height="250" src="./img/speakers.png">
