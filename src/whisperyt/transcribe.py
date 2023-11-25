@@ -61,6 +61,7 @@ class YouTubeTranscriber:
             return None
 
         file_name, file_extension = os.path.splitext(audio_path)
+        
         with open(audio_path, 'rb') as f:
             files = {
                 'audio': (file_name, f, f'audio/{file_extension[1:]}'),

@@ -21,8 +21,8 @@ from whisperyt import YouTubeTranscriber, pretty_json
 
 Gladia = YouTubeTranscriber("YOUR-API-KEY")
 response = Gladia.transcribe("https://www.youtube.com/watch?v=BrcKRhQ7K00")
-json_data = pretty_json(response)
+print(pretty_json(response))
 ```
 Output:
 
-<img align="center" width="250" height="400" src="./img/pretty-json.png">
+<img align="center" width="250" height="440" src="./img/pretty-json.png">
