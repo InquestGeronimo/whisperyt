@@ -54,7 +54,7 @@ Output:
 
 ---
 
-### View Transcript by Speaker Turn:
+### View Transcription by Speaker Turn:
 
 ```py
 df = DataProcessor.get_table("output.json")
