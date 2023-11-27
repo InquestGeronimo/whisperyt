@@ -7,7 +7,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
-VERSION = "0.1.1"
+VERSION = "0.1.2"
 DESCRIPTION = "Using Gladia's Whisper API for transcribing YouTube videos"
 LONG_DESCRIPTION = "Use Whisper speech-to-text to transcribe YouTube videos and run postprocessing with the transcription."
 
