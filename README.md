@@ -18,7 +18,7 @@ pip install whisperyt
 ## Quick Start <img align="center" width="23" height="23" src="https://media.giphy.com/media/PeaNPlyOVPNMHjqTm7/giphy.gif">
 <br>
 
-The initial step involves initializing the `YouTubeTranscriber` class before proceeding with your API request. To get started, simply create a free account on [Gladia's website](https://app.gladia.io/?_gl=1*1thro73*_ga*MTI5MDgyMjkzMS4xNzAwMzE0NTc5*_ga_LMW59LN2SD*MTcwMDg3MTUwMy45LjAuMTcwMDg3MTUwMy4wLjAuMA..) and provide your API token. Afterwards, pass the YouTube video URL of your choice:
+The initial step involves initializing the `YouTubeTranscriber` class before proceeding with your API request. To get started, simply create a free account on [Gladia's site](https://app.gladia.io/?_gl=1*1thro73*_ga*MTI5MDgyMjkzMS4xNzAwMzE0NTc5*_ga_LMW59LN2SD*MTcwMDg3MTUwMy45LjAuMTcwMDg3MTUwMy4wLjAuMA..) and provide your API token. Afterwards, pass the YouTube video URL of your choice:
 
 ```py
 from whisperyt import YouTubeTranscriber, DataProcessor
@@ -80,3 +80,5 @@ Output:
 **File Size**: Audio files must not exceed 500 MB in size. Larger files will not be accepted by the API.
 
 **API Call Limits**: To ensure the quality of service and fairness to all users, API call limits have been implemented. For the free tier, users can make a maximum of 20 calls per hour, with up to 3 concurrent requests. Users subscribed to the Pro tier can make up to 200 calls per minute and up to 15 concurrent requests.
+
+For further details, refer to the [documentation](https://docs.gladia.io/reference/limitations-and-best-practices).
