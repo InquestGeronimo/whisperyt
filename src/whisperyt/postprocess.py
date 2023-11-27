@@ -4,6 +4,14 @@ from typing import Optional, Union
 from requests.models import Response
 
 class DataProcessor:
+    """
+    A utility class for processing data, including JSON responses and files, and working with pandas DataFrames.
+
+    This class provides methods for converting JSON responses to pretty-printed strings, saving JSON data to files,
+    loading JSON data into pandas DataFrames, extracting transcriptions, and displaying transcriptions by speaker turn.
+
+    """
+    
     @staticmethod
     def pretty_json(response: Response) -> Optional[str]:
         """
