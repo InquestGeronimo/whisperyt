@@ -26,7 +26,8 @@ from whisperyt import YouTubeTranscriber, DataProcessor
 gladia = YouTubeTranscriber("YOUR-API-KEY")
 
 response = gladia.transcribe("https://www.youtube.com/watch?v=BrcKRhQ7K00")
-print(DataProcessor.pretty_json(response))
+response = DataProcessor.pretty_json(response)
+print(response)
 ```
 Chunk of output:
 
@@ -61,7 +62,7 @@ Output:
 
 ### View Transcription by Speaker Turn:
 
-From Dataframe, display transcription by speaker turn:
+From Dataframe, print transcription by speaker turn:
 
 ```py
 df = DataProcessor.get_table("output.json")
