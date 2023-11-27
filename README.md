@@ -33,7 +33,7 @@ Chunk of output:
 <img align="center" width="250" height="440" src="./img/pretty-json.png">
 
 ---
-### Save Transcription in JSON File
+### Save Transcription to JSON File
 
 ```py
 from whisperyt import YouTubeTranscriber, DataProcessor
@@ -46,7 +46,7 @@ DataProcessor.save_json_file(response.json(), "output.json")
 ---
 ### View Transcription in Pandas Dataframe
 
-After your transcription, has been saved in a JSON file, you can load it in a Pandas Dataframe:
+After your transcription has been saved in a JSON file, you can load it in a Pandas Dataframe:
 
 ```py
 df = DataProcessor.get_table("output.json")
@@ -60,6 +60,8 @@ Output:
 ---
 
 ### View Transcription by Speaker Turn:
+
+From Dataframe, display transcription by speaker turn:
 
 ```py
 df = DataProcessor.get_table("output.json")
