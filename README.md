@@ -4,7 +4,7 @@
 
 <br>
 
-**WhisperYT** is a Python client for interacting with Gladia's [API](https://docs.gladia.io/reference/pre-recorded#sending-video-for-transcription) designed specifically for transcribing YouTube videos. Powered by an optimized variant of OpenAI's Whisper model, Gladia's backend performs Automatic Speech Recognition (ASR), converting spoken words into written text with remarkable precision. Best of all, you can enjoy up to 10 hours of free API usage each month.
+**WhisperYT** is a Python client for interacting with Gladia's [API](https://docs.gladia.io/reference/pre-recorded) designed specifically for transcribing YouTube videos. Powered by an optimized variant of OpenAI's Whisper model, Gladia's backend performs Automatic Speech Recognition (ASR), converting spoken words into written text with remarkable precision. Best of all, you can enjoy up to 10 hours of free API usage each month.
 
 In addition to providing access to Gladia's API, this versatile library equips you with postprocessing features to effortlessly manipulate and refine your transcribed data, making it a valuable tool for post-transcription tasks.
 
@@ -23,9 +23,9 @@ The initial step involves initializing the `YouTubeTranscriber` class before pro
 ```py
 from whisperyt import YouTubeTranscriber, DataProcessor
 
-Gladia = YouTubeTranscriber("YOUR-API-KEY")
+gladia = YouTubeTranscriber("YOUR-API-KEY")
 
-response = Gladia.transcribe("https://www.youtube.com/watch?v=BrcKRhQ7K00")
+response = gladia.transcribe("https://www.youtube.com/watch?v=BrcKRhQ7K00")
 print(DataProcessor.pretty_json(response))
 ```
 Chunk of output:
@@ -38,9 +38,9 @@ Chunk of output:
 ```py
 from whisperyt import YouTubeTranscriber, DataProcessor
 
-Gladia = YouTubeTranscriber("YOUR-API-KEY")
+gladia = YouTubeTranscriber("YOUR-API-KEY")
 
-response = Gladia.transcribe("https://www.youtube.com/watch?v=BrcKRhQ7K00")
+response = gladia.transcribe("https://www.youtube.com/watch?v=BrcKRhQ7K00")
 DataProcessor.save_json_file(response.json(), "output.json")
 ```
 ---
@@ -71,3 +71,12 @@ DataProcessor.get_transcription_by_turn(df)
 Output:
 
 <img align="center" width="650" height="250" src="./img/speakers.png">
+
+---
+### Best Practices with Gladia's API
+
+**Audio Length**: The maximum length of audio that can be transcribed in a single request is currently 135 minutes. Attempts to transcribe longer audio files may result in errors.
+
+**File Size**: Audio files must not exceed 500 MB in size. Larger files will not be accepted by the API.
+
+**API Call Limits**: To ensure the quality of service and fairness to all users, API call limits have been implemented. For the free tier, users can make a maximum of 20 calls per hour, with up to 3 concurrent requests. Users subscribed to the Pro tier can make up to 200 calls per minute and up to 15 concurrent requests.
