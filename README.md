@@ -65,7 +65,7 @@ From Dataframe, display transcription by speaker turn:
 
 ```py
 df = DataProcessor.get_table("output.json")
-DataProcessor.get_transcription_by_turn(df)
+DataProcessor.print_transcription_by_turn(df)
 ```
 
 Output:

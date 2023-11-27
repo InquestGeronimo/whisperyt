@@ -96,7 +96,7 @@ class DataProcessor:
             return None
 
     @staticmethod
-    def get_transcription_by_turn(df: pd.DataFrame) -> None:
+    def print_transcription_by_turn(df: pd.DataFrame) -> None:
         """
         Display transcriptions by speaker turn from a DataFrame.
 
@@ -127,3 +127,7 @@ class DataProcessor:
                 print(f'\nSpeaker {current_speaker}: {" ".join(current_text)}')
         except Exception as e:
             print(f"An error occurred: {e}")
+
+
+
+
