@@ -4,9 +4,9 @@
 
 <br>
 
-**WhisperYT** is a Python client for interacting with Gladia's [API](https://docs.gladia.io/reference/pre-recorded) designed specifically for transcribing YouTube videos. Powered by an optimized variant of OpenAI's Whisper model, Gladia's backend performs Automatic Speech Recognition (ASR), converting spoken words into written text with remarkable accuracy, speed, extended multilingual capabilities, speaker diarization and word-level timestamp. Best of all, you can enjoy up to 10 hours of free API usage each month.
+**WhisperYT** is a Python client for interacting with Gladia's [API](https://docs.gladia.io/reference/pre-recorded) designed specifically for transcribing YouTube videos. Powered by an optimized variant of OpenAI's Whisper model, Gladia's backend performs Automatic Speech Recognition (ASR), converting spoken words into written text with remarkable accuracy, speed, 99+ supported languages, code switching, auto-language detection, speaker diarization and word-level timestamp. Best of all, you can enjoy up to 10 hours of free API usage each month.
 
-In addition to providing access to Gladia's API, this versatile library equips you with postprocessing features to effortlessly manipulate and refine your transcribed data, making it a valuable tool for post-transcription tasks.
+In addition to providing access to Gladia's API, this versatile library equips you with postprocessing features to manipulate and refine your transcribed data, making it a valuable tool for post-transcription downstream tasks.
 
 ## Install <img align="center" width="23" height="23" src="https://media.giphy.com/media/sULKEgDMX8LcI/giphy.gif">
 <br>
