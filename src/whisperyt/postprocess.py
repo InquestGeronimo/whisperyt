@@ -20,8 +20,6 @@ class DataProcessor:
         :param response: Response object to process.
         :return: Pretty-printed JSON string.
         """
-        if not response:
-            return None
 
         try:
             json_data = response.json()
@@ -45,6 +43,7 @@ class DataProcessor:
         try:
             with open(file_name, 'w', encoding='utf-8') as file:
                 json.dump(json_data, file, indent=4)
+            print(f"Saved JSON data to {file_name} successfully.")
         except IOError as e:
             print(f"Failed to write to file {file_name}: {e}")
 
