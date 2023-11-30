@@ -8,6 +8,8 @@
 
 In addition to providing access to Gladia's API, this versatile library equips you with postprocessing features to manipulate and refine your transcribed data, making it a valuable tool for post-transcription downstream tasks.
 
+>**Please note**: WhisperYT currently works for both pre-recorded and live YouTube videos, although the live feature is experimental and under development.
+
 ## Install <img align="center" width="23" height="23" src="https://media.giphy.com/media/sULKEgDMX8LcI/giphy.gif">
 <br>
 
@@ -72,6 +74,24 @@ DataProcessor.print_transcription_by_turn(df)
 Output:
 
 <img align="center" width="650" height="250" src="./img/speakers.png">
+
+---
+
+## Transcribing Live YouTube Videos
+
+**Status**: This feature is currently experimental and may not be stable. It is under active development, and we encourage users to test it and provide feedback.
+
+Make sure you have ffmpeg installed on your machine. FFmpeg is used for audio processing. You need to have FFmpeg installed on your system, and it should be accessible from the command line. You can download FFmpeg from the [official website](https://www.ffmpeg.org/download.html).
+
+Make sure that the ffmpeg executable is in your system's PATH so that it can be invoked from the command line.
+
+```py
+gladia = YouTubeTranscriber("YOUR-API-KEY")
+
+response = gladia.transcribe("https://www.youtube.com/watch?v=OBZqP69fOCE", stream=True)
+```
+
+**Streaming Options**: You can customize the streaming behavior by specifying the `output_filename` to save the audio locally, set a `timer` to control the maximum duration of the stream, and choose the `encoding` format for the streamed audio, default is `WAV`. These options allow you to tailor the streaming experience to your specific needs while leveraging the power of real-time transcription.
 
 ---
 ### Best Practices with Gladia's API
