@@ -15,7 +15,7 @@ DEPENDENCIES = ["requests>=2.31.0", "pandas>=2.1.3", "yt_dlp>=2023.11.16", "stre
 setup(
     name="whisperyt",
     version=VERSION,
-    author="InquestGeronimmo",
+    author="InquestGeronimo",
     author_email="rcostanl@gmail.com",
     description=DESCRIPTION,
     long_description_content_type="text/markdown",
