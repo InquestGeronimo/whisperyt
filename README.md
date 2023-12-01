@@ -10,14 +10,14 @@ In addition to providing access to Gladia's API, this versatile library equips y
 
 >**Please note**: WhisperYT currently works for both pre-recorded and live YouTube videos, although the live feature is experimental and under development.
 
-## Install <img align="center" width="23" height="23" src="https://media.giphy.com/media/sULKEgDMX8LcI/giphy.gif">
+# Install <img align="center" width="30" height="29" src="https://media.giphy.com/media/sULKEgDMX8LcI/giphy.gif">
 <br>
 
 ```
 pip install whisperyt
 ```
 
-## Quick Start <img align="center" width="23" height="23" src="https://media.giphy.com/media/PeaNPlyOVPNMHjqTm7/giphy.gif">
+# Quick Start <img align="center" width="30" height="29" src="https://media.giphy.com/media/PeaNPlyOVPNMHjqTm7/giphy.gif">
 <br>
 
 The initial step involves initializing the `YouTubeTranscriber` class before proceeding with your API request. To get started, simply create a free account on [Gladia's site](https://app.gladia.io/?_gl=1*1thro73*_ga*MTI5MDgyMjkzMS4xNzAwMzE0NTc5*_ga_LMW59LN2SD*MTcwMDg3MTUwMy45LjAuMTcwMDg3MTUwMy4wLjAuMA..) and provide your API token. Afterwards, pass the YouTube video URL of your choice:
@@ -77,13 +77,11 @@ Output:
 
 ---
 
-## Transcribing Live YouTube Videos
+# Transcribing Live YouTube Videos <img align="center" width="100" height="60" src="https://media.giphy.com/media/13Nc3xlO1kGg3S/giphy.gif">
 
 **Status**: This feature is currently experimental and may not be stable. It is under active development, and we encourage users to test it and provide feedback.
 
-Make sure you have ffmpeg installed on your machine. FFmpeg is used for audio processing. You need to have FFmpeg installed on your system, and it should be accessible from the command line. You can download FFmpeg from the [official website](https://www.ffmpeg.org/download.html).
-
-Make sure that the ffmpeg executable is in your system's PATH so that it can be invoked from the command line.
+Make sure you have `ffmpeg` installed on your machine and is accessible from the command line. You can download FFmpeg from the [official website](https://www.ffmpeg.org/download.html).
 
 ```py
 gladia = YouTubeTranscriber("YOUR-API-KEY")
