@@ -90,7 +90,11 @@ class DataProcessor:
         try:
             with open(file_path, 'r', encoding='utf-8') as file:
                 data = json.load(file)
-            transcriptions = [pred['transcription'] for pred in data['prediction'] if 'transcription' in pred]
+            transcriptions = [
+                pred['transcription'] 
+                for pred in data['prediction'] 
+                if 'transcription' in pred
+            ]
             return ' '.join(transcriptions)
         except Exception as e:
             print(f"An error occurred: {e}")
