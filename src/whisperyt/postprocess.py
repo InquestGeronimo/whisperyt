@@ -5,11 +5,13 @@ from requests.models import Response
 
 class DataProcessor:
     """
-    A utility class for processing data, including JSON responses and files, and working with pandas DataFrames.
+    A utility class for processing data, including JSON responses 
+    and files, and working with pandas DataFrames.
 
-    This class provides methods for converting JSON responses to pretty-printed strings, saving JSON data to files,
-    loading JSON data into pandas DataFrames, extracting transcriptions, and displaying transcriptions by speaker turn.
-
+    This class provides methods for converting JSON responses 
+    to pretty-printed strings, saving JSON data to files,
+    loading JSON data into pandas DataFrames, extracting 
+    transcriptions, and displaying transcriptions by speaker turn.
     """
     
     @staticmethod
@@ -87,8 +89,8 @@ class DataProcessor:
         """
         try:
             with open(file_path, 'r', encoding='utf-8') as file:
-                json_data = json.load(file)
-            transcriptions = [prediction['transcription'] for prediction in json_data['prediction'] if 'transcription' in prediction]
+                data = json.load(file)
+            transcriptions = [pred['transcription'] for pred in data['prediction'] if 'transcription' in pred]
             return ' '.join(transcriptions)
         except Exception as e:
             print(f"An error occurred: {e}")
