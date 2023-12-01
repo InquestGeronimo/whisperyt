@@ -13,15 +13,15 @@ class YouTubeStreamer:
     def __init__(
         self, 
         video_url: str, 
-        output_filename: str = 'output.wav', 
-        timer_seconds: Optional[int] = None
+        output_filename: str, 
+        timer_seconds: int
     ):
         """
         Initialize a YouTubeStreamer.
 
         :param video_url: The URL of the YouTube video to stream audio from.
-        :param output_filename: The name of the output WAV file. Defaults to 'output.wav'.
-        :param timer_seconds: The maximum duration in seconds to stream audio. Defaults to None.
+        :param output_filename: The name of the output WAV file.
+        :param timer_seconds: The maximum duration in seconds to stream audio.
         """
         self.video_url = video_url
         self.output_filename = output_filename
