@@ -89,7 +89,7 @@ gladia = YouTubeTranscriber("YOUR-API-KEY")
 response = gladia.transcribe("https://www.youtube.com/watch?v=OBZqP69fOCE", stream=True)
 ```
 
-**Streaming Options**: You can customize the streaming behavior by specifying the `output_filename` to save the audio locally, set a `timer` to control the maximum duration of the stream, and choose the `encoding` format for the streamed audio, default is `WAV`. These options allow you to tailor the streaming experience to your specific needs while leveraging the power of real-time transcription.
+**Streaming Options**: You can customize the streaming behavior by specifying the `output_file` to save the audio locally, set a `timer` to control the maximum duration of the stream, and choose the `encoding` format for the streamed audio, default is `WAV`. These options allow you to tailor the streaming experience to your specific needs while leveraging the power of real-time transcription.
 
 ---
 ### Best Practices with Gladia's API

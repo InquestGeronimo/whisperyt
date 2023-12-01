@@ -35,7 +35,7 @@ class YouTubeTranscriber(Transcriber, StreamTranscriber):
         url: str,
         toggle_diarization: bool = True,
         stream: bool = False,
-        output_filename: str = "output.wav",
+        output_file: str = "output.wav",
         timer: int = 10,
         encoding: str = "WAV"
     ) -> Optional[requests.Response]:
@@ -55,4 +55,4 @@ class YouTubeTranscriber(Transcriber, StreamTranscriber):
             return transcription
         else:
             s_transcriber = StreamTranscriber(self.api_key, self.wss_endpoint)
-            asyncio.run(s_transcriber.run_transcription(url, output_filename, timer, encoding))
+            asyncio.run(s_transcriber.run_transcription(url, output_file, timer, encoding))

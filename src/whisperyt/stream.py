@@ -132,13 +132,10 @@ class StreamTranscriber(YouTubeStreamer):
 
             # Delay between sending parts (500 milliseconds in this case)
             await asyncio.sleep(0.5)
-            message = {
-                'frames': part
-            }
+            message = {'frames': part}
             await socket.send(json.dumps(message))
 
         await asyncio.sleep(2)
-        print("Final closing")
 
     async def receive_transcription(self, socket: websockets.WebSocketClientProtocol):
         """
@@ -166,19 +163,19 @@ class StreamTranscriber(YouTubeStreamer):
                 print(f"Received response: {utterance}")
 
 
-    async def run_transcription(self, url, output_filename, timer, encoding):
+    async def run_transcription(self, url, output_file, timer, encoding):
         """
         Run the audio transcription process.
         """
         streamer = YouTubeStreamer(
             video_url=url, 
-            output_filename=output_filename, 
+            output_filename=output_file, 
             timer_seconds=timer
         )
         
         streamer.stream_audio()
         
         async with websockets.connect(self.wss_endpoint) as socket:
-            send_task = asyncio.create_task(self.send_audio(socket, output_filename, encoding))
+            send_task = asyncio.create_task(self.send_audio(socket, output_file, encoding))
             receive_task = asyncio.create_task(self.receive_transcription(socket))
             await asyncio.gather(send_task, receive_task)
