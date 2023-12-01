@@ -25,6 +25,7 @@ class YouTubeTranscriber(Transcriber, StreamTranscriber):
         :param api_endpoint: URL for HTTP API calls.
         :param wss_endpoint: URL for Websocket API calls.
         """
+        
         self.api_key = api_key
         self.api_endpoint = "https://api.gladia.io/audio/text/audio-transcription/"
         self.wss_endpoint = "wss://api.gladia.io/audio/text/audio-transcription"
@@ -47,6 +48,7 @@ class YouTubeTranscriber(Transcriber, StreamTranscriber):
         :param timer_seconds: Timer duration in seconds for streaming only (default is 10).
         :return: Response object from the transcription request.
         """
+        
         if not stream:
             transcriber = Transcriber(self.api_key, self.api_endpoint)
             transcription =  transcriber.transcribe_audio(url, toggle_diarization)
