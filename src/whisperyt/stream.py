@@ -149,22 +149,22 @@ class StreamTranscriber(YouTubeStreamer):
         while True:
             response = await socket.recv()
             utterance = json.loads(response)
-            if utterance:
-                event_type = utterance.get(self.TYPE_KEY)  # Get the event type
-                if event_type:
-                    if event_type == "transcript":
-                        transcription = utterance.get(self.TRANSCRIPTION_KEY, "")
-                        language = utterance.get(self.LANGUAGE_KEY, "")
-                        print(f"Transcription: ({language}) {transcription}")
-                    elif event_type == "error":
-                        error_message = utterance.get(self.ERROR_KEY, "Unknown error")  # Safely access the error message
-                        print(f"API Error: {error_message}")
-                    else:
-                        print(f"Received response: {utterance}")
-                else:
-                    print(f"Event type missing in response: {utterance}")
-            else:
+
+            if not utterance:
                 print('Empty response, waiting for the next utterance...')
+                continue
+
+            event_type = utterance.get(self.TYPE_KEY, "unknown")
+            if event_type == "transcript":
+                transcription = utterance.get(self.TRANSCRIPTION_KEY, "")
+                language = utterance.get(self.LANGUAGE_KEY, "")
+                print(f"Transcription: ({language}) {transcription}")
+            elif event_type == "error":
+                error_message = utterance.get(self.ERROR_KEY, "Unknown error")
+                print(f"API Error: {error_message}")
+            else:
+                print(f"Received response: {utterance}")
+
 
     async def run_transcription(self, url, output_filename, timer, encoding):
         """
